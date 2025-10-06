@@ -1,0 +1,32 @@
+// Tarjetas
+@mixin card {
+    background: $blanco;
+    border-radius: $radius;
+    box-shadow: $sombra;
+    padding: 15px;
+    text-align: center;
+}
+
+// GRID
+@mixin grid($cols, $gap: 20px) {
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+    gap: $gap;
+}
+
+// IMAGENES
+@mixin imgCover($height: auto) {
+  width: 100%;
+  height: $height;
+  object-fit: cover;
+  border-radius: $radius;
+  display: block;
+}
+
+// MEDIA QUERIES
+@mixin mobile {
+  @media (max-width: $mobile) { @content; }
+}
+@mixin tablet {
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) { @content; }
+}
