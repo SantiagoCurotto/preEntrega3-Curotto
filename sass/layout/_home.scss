@@ -1,1 +1,66 @@
+.gridContainer {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "main" "footer";
+    min-height: 100vh;
+}
 
+main {
+    grid-area: main;
+    padding: 20px;
+}
+
+footer {
+    grid-area: footer;
+    background: $gris;
+    text-align: center;
+    padding: 15px;
+}
+
+/* INDEX */
+
+.presText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+        font-weight: 700;
+        color: $rojo;
+        margin: 0 0 15px;
+    }
+
+    p {
+        font-weight: 700;
+    }
+}
+
+.presImg {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.destacados {
+    @include grid(4);
+
+    @include tablet {
+        @include grid(2);
+    }
+
+    @include mobile {
+        @include grid(1);
+    }
+}
+.card {
+  @include card;
+  margin: 20px;
+  margin-bottom: 50px;
+    h2 { margin: 10px; color: $rojo; font-size: 1.2rem; }
+  p  { font-size: 1rem; line-height: 1.4; color: #333; }
+  img { @include img-cover(500px); }
+  @include tablet { img { @include img-cover(400px); } }
+  @include mobile { img { @include img-cover(450px); } }
+}
