@@ -1,3 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html, body {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Roboto", Arial;
+  color: #111111;
+  background: #fff;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "main" "footer";
+  min-height: 100vh;
+}
+
+main {
+  grid-area: main;
+  padding: 20px;
+}
+
+footer {
+  grid-area: footer;
+  background: #f8f9fa;
+  text-align: center;
+  padding: 15px;
+}
+
+/* INDEX */
+.presText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.presText h1 {
+  font-weight: 700;
+  color: #b30000;
+  margin: 0 0 15px;
+}
+.presText p {
+  font-weight: 700;
+}
+
+.presImg {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.destacados {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .destacados {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .destacados {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+.card h2 {
+  margin: 10px;
+  color: #b30000;
+  font-size: 1.2rem;
+}
+.card p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #333;
+}
+.card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .card img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+  }
+}
+
+/* IDOLOS*/
+.idolos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .idolos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+
+.idolo {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+}
+.idolo img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  max-width: 400px;
+  margin: 0 auto 10px;
+}
+.idolo h2 {
+  margin: 10px;
+  color: #b30000;
+  font-size: 1.2rem;
+}
+.idolo p {
+  font-style: italic;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .idolo img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    max-width: none;
+  }
+}
+
+.introIdolos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 50px;
+}
+.introIdolos h1 {
+  color: #b30000;
+  font-weight: 700;
+}
+.introIdolos p {
+  font-weight: 700;
+}
+
+/* HISTORIA  */
+.historia {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  align-items: center;
+}
+.historia article {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+}
+.historia article h2 {
+  color: #b30000;
+  font-weight: 700;
+}
+.historia article p {
+  font-style: italic;
+  margin-top: 10px;
+}
+.historia article img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  max-width: 450px;
+  margin: 10px auto 0;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .historia article img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    max-width: none;
+  }
+}
+@media (max-width: 768px) {
+  .historia article img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    max-width: none;
+  }
+}
+
+/* INTERNACIONALES  */
+.copasInternacionales {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+.copasInternacionales .copa {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+}
+.copasInternacionales .copa h2 {
+  color: #b30000;
+  margin-bottom: 10px;
+}
+.copasInternacionales .copa p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+.copasInternacionales .copa img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  max-width: 750px;
+  margin: 0 auto 15px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .copasInternacionales .copa img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    max-width: none;
+  }
+}
+@media (max-width: 768px) {
+  .copasInternacionales .copa img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+  }
+}
+
+/* NACIONALES */
+.copasNacionales {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 20px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .copasNacionales {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .copasNacionales {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 18px;
+    padding: 12px;
+  }
+}
+.copasNacionales .copaNacional {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+}
+.copasNacionales .copaNacional h2 {
+  color: #b30000;
+  margin-bottom: 10px;
+}
+.copasNacionales .copaNacional p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+.copasNacionales .copaNacional img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  max-width: 700px;
+  margin: 0 auto 15px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .copasNacionales .copaNacional img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    max-width: none;
+  }
+}
+@media (max-width: 768px) {
+  .copasNacionales .copaNacional img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+  }
+}
+
+/* Todos los h1 principales (Historia, Internacionales, Nacionales, etc.) */
+main h1 {
+  color: #b30000;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.copasInternacionales h2 {
+  color: #b30000;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.copasInternacionales .copa {
+  margin-bottom: 25px;
+}
+
+.historia h1, .historia h2 {
+  color: #b30000;
+}
+.historia article {
+  margin-bottom: 25px;
+}
 
 /*# sourceMappingURL=main.css.map */

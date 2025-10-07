@@ -54,13 +54,256 @@ footer {
         @include grid(1);
     }
 }
+
 .card {
-  @include card;
-  margin: 20px;
-  margin-bottom: 50px;
-    h2 { margin: 10px; color: $rojo; font-size: 1.2rem; }
-  p  { font-size: 1rem; line-height: 1.4; color: #333; }
-  img { @include img-cover(500px); }
-  @include tablet { img { @include img-cover(400px); } }
-  @include mobile { img { @include img-cover(450px); } }
+    @include card;
+    margin: 20px;
+    margin-bottom: 50px;
+
+    h2 {
+        margin: 10px;
+        color: $rojo;
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.4;
+        color: #333;
+    }
+
+    img {
+        @include img-cover(500px);
+    }
+
+    @include tablet {
+        img {
+            @include img-cover(400px);
+        }
+    }
+
+    @include mobile {
+        img {
+            @include img-cover(450px);
+        }
+    }
+}
+
+/* IDOLOS*/
+.idolos {
+    @include grid(2, 20px);
+    width: 100%;
+
+    @include mobile {
+        @include grid(1, 20px);
+    }
+}
+
+.idolo {
+    @include card;
+
+    img {
+        @include img-cover(600px);
+        max-width: 400px;
+        margin: 0 auto 10px;
+    }
+
+    h2 {
+        margin: 10px;
+        color: $rojo;
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-style: italic;
+        margin-top: 10px;
+    }
+
+    @include mobile {
+        img {
+            @include img-cover(500px);
+            max-width: none;
+        }
+    }
+}
+
+.introIdolos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 50px;
+
+    h1 {
+        color: $rojo;
+        font-weight: 700;
+    }
+
+    p {
+        font-weight: 700;
+    }
+}
+
+/* HISTORIA  */
+.historia {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+    align-items: center;
+
+    article {
+        @include card;
+        width: 100%;
+        max-width: 700px;
+
+        h2 {
+            color: $rojo;
+            font-weight: 700;
+        }
+
+        p {
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        img {
+            @include img-cover(300px);
+            max-width: 450px;
+            margin: 10px auto 0;
+        }
+
+        @include tablet {
+            img {
+                @include img-cover(350px);
+                max-width: none;
+            }
+        }
+
+        @include mobile {
+            img {
+                @include img-cover(240px);
+                max-width: none;
+            }
+        }
+    }
+}
+
+/* INTERNACIONALES  */
+.copasInternacionales {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+
+    .copa {
+        @include card;
+
+        h2 {
+            color: $rojo;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        img {
+            @include img-cover(500px);
+            max-width: 750px;
+            margin: 0 auto 15px;
+        }
+
+        @include tablet {
+            img {
+                @include img-cover(400px);
+                max-width: none;
+            }
+        }
+
+        @include mobile {
+            img {
+                @include img-cover(220px);
+            }
+        }
+    }
+}
+
+/* NACIONALES */
+.copasNacionales {
+    @include grid(2, 30px);
+    padding: 20px;
+
+    @include tablet {
+        @include grid(2, 20px);
+    }
+
+    @include mobile {
+        @include grid(1, 18px);
+        padding: 12px;
+    }
+
+    .copaNacional {
+        @include card;
+
+        h2 {
+            color: $rojo;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        img {
+            @include img-cover(450px);
+            max-width: 700px;
+            margin: 0 auto 15px;
+        }
+
+        @include tablet {
+            img {
+                @include img-cover(400px);
+                max-width: none;
+            }
+        }
+
+        @include mobile {
+            img {
+                @include img-cover(220px);
+            }
+        }
+    }
+}
+
+
+/* Todos los h1 principales (Historia, Internacionales, Nacionales, etc.) */
+main h1 {
+  color: $rojo;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.copasInternacionales {
+  h2 {
+    color: $rojo;
+    font-weight: 700;
+    margin-bottom: 15px; 
+  }
+
+  .copa {
+    margin-bottom: 25px; 
+  }
+}
+
+
+.historia {
+  h1, h2 {
+    color: $rojo;
+  }
+  article {
+    margin-bottom: 25px; 
+  }
 }

@@ -15,7 +15,7 @@
 }
 
 // IMAGENES
-@mixin imgCover($height: auto) {
+@mixin img-cover($height: auto) {
   width: 100%;
   height: $height;
   object-fit: cover;
