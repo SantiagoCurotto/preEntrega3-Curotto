@@ -8,7 +8,9 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" type="image/png" href="./assets/escudoRiver.jpg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <title>MUSEO RIVER</title>
+   
 </head>
 
 <body>
@@ -59,64 +61,66 @@
         </nav>
     </header>
     <div class="gridContainer">
-    <main class="mainContainer">
-        <!-- PRESENTACION DE LA PAGINA -->
-        <section class="pres">
-            <div class="presText">
-                <h1>MUSEO DE RIVER PLATE</h1>
-                <p>Un recorrido por la historia del mas grande</p>
-            </div>
-            <div class="presImg">
-                <img src="./assets/3510-logomuseo.jpg" alt="LOGO MUSEO RIVER">
-            </div>
+        <main class="mainContainer">
+            <!-- PRESENTACION DE LA PAGINA -->
+            <section class="pres">
+                <div class="presText">
+                    <h1>MUSEO DE RIVER PLATE</h1>
+                    <p>Un recorrido por la historia del mas grande</p>
+                </div>
+                <div class="presImg">
+                    <img src="./assets/3510-logomuseo.jpg" alt="LOGO MUSEO RIVER">
+                </div>
 
-        </section>
-        <!-- PRESENTO LAS DIFERENTES SECCIONES DE LA PAGINA -->
-        <section class="destacados">
-            <article class="card">
-                <h2>Idolos</h2>
-                <img src="./assets/labruna.jpg" alt="labruna idolo">
-                <p>Su paso dejo huella en la institución, recorda su historia</p>
-                <a href="./pages/idolos.html" class="btn btn-outline-danger">Conoce los idolos</a>
-            </article>
-            <article class="card">
-                <h2>Copas Internacionales</h2>
-                <img src="./assets/libertadores 2018.jpg" alt="libertadores 2018">
-                <p>Conoce los titulos que gano la institución a nivel mundial</p>
-                <a href="./pages/internacionales.html" class="btn btn-outline-danger">Ver copas Internacionales</a>
-            </article>
-            <article class="card">
-                <h2>Copas Nacionales</h2>
-                <img src="./assets/beto alonso vuelta en la bombonera.jpg" alt="beto alonso vuelta en la bombonera">
-                <p>Conoce los titulos que gano la institución a nivel Nacional</p>
-                <a href="./pages/nacionales.html" class="btn btn-outline-danger">Ver copas nacionales</a>
-            </article>
-            <article class="card">
-                <h2>El monumental</h2>
-                <img src="./assets/mas monumental.jpg" alt="Mas monumental">
-                <p>La evolucion del estadio mas convocante de America</p>
-                <a href="./pages/historia.html" class="btn btn-outline-danger">Ver historia completa</a>
-            </article>
+            </section>
+            <!-- PRESENTO LAS DIFERENTES SECCIONES DE LA PAGINA -->
+            <section class="destacados">
+                <article class="card"  data-aos="fade-up">
+                    <h2>Idolos</h2>
+                    <img src="./assets/labruna.jpg" alt="labruna idolo">
+                    <p>Su paso dejo huella en la institución, recorda su historia</p>
+                    <a href="./pages/idolos.html" class="btn btn-outline-danger">Conoce los idolos</a>
+                </article>
+                <article class="card" data-aos="fade-up">
+                    <h2>Copas Internacionales</h2>
+                    <img src="./assets/libertadores 2018.jpg" alt="libertadores 2018">
+                    <p>Conoce los titulos que gano la institución a nivel mundial</p>
+                    <a href="./pages/internacionales.html" class="btn btn-outline-danger">Ver copas Internacionales</a>
+                </article>
+                <article class="card" data-aos="fade-up">
+                    <h2>Copas Nacionales</h2>
+                    <img src="./assets/beto alonso vuelta en la bombonera.jpg" alt="beto alonso vuelta en la bombonera">
+                    <p>Conoce los titulos que gano la institución a nivel Nacional</p>
+                    <a href="./pages/nacionales.html" class="btn btn-outline-danger">Ver copas nacionales</a>
+                </article>
+                <article class="card" data-aos="fade-up">
+                    <h2>El monumental</h2>
+                    <img src="./assets/mas monumental.jpg" alt="Mas monumental">
+                    <p>La evolucion del estadio mas convocante de America</p>
+                    <a href="./pages/historia.html" class="btn btn-outline-danger">Ver historia completa</a>
+                </article>
 
-        </section>
-        <!-- TESTIMONIO -->
-    </main>
-    <footer>
-        <!-- CONTENIDO DEL PIE -->
-         <div class="contenido-footer">
-            <p>&copy; 2025 Museo River Plate. Todos los derechos reservados.</p>
-                    <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-         </div>
-    </footer>
+            </section>
+            <!-- TESTIMONIO -->
+        </main>
+        <footer>
+            <!-- CONTENIDO DEL PIE -->
+            <div class="contenido-footer">
+                <p>&copy; 2025 Museo River Plate. Todos los derechos reservados.</p>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, duration: 600, offset: 80 });</script>
 </body>
 
 </html>
